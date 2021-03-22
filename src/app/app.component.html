@@ -1,0 +1,64 @@
+
+  
+   
+<div class="barra">
+    <nav class="navbar navbar-expand-lg navbar-dark" id="menu">
+      <a [routerLink]="['/inicio']" [routerLinkActive]="['actived']" class="navbar-brand text-white">
+        <img class="nav-logo" src="../assets/img/descarga.jpg" height="40px" >
+      </a>
+     
+      <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a [routerLink]="['/inicio']" [routerLinkActive]="['actived']" class="nav-link">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/agregar-producto']" [routerLinkActive]="['actived']" class="nav-link">Crear producto</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/productos']" [routerLinkActive]="['actived']" class="nav-link">Productos</a>
+          </li>
+          
+        
+
+      
+        </ul>
+        <span class="navbar-text" style="color: azure;">
+          Bienvenido!
+        </span>
+
+        
+      
+
+      </div>
+      
+     
+    </nav>
+  </div>
+
+
+  <div id="content" class="container-principal">
+    <router-outlet></router-outlet>
+  </div>
+  
+
+  <footer class="footer">
+    <div class="w3-center w3-small ">
+        <p> Tienda Kronos S.A </p> <a href="/about/about_copyright.asp"><p>terms of use</p></a>
+         <a href="/about/about_privacy.asp"><p>cookie and privacy policy</p></a>
+         <a href="/about/about_copyright.asp"><p>Copyright 1999-2021</p></a> <p>by Refsnes Data. All Rights Reserved.</p>
+    <img src="../assets/img/descarga.jpg" >
+       
+
+    <div class="social">
+      <a href="https://www.facebook.com/IslaKronosQuicentroShopping"><img src="../assets/img/facebook-logo.png" alt="facebook"></a>
+      <a href="https://www.instagram.com/"><img src="../assets/img/4202090instagramlogosocialsocialmedia-115598_115703.png" alt="youtube"></a>
+      
+      <a href="https://www.youtube.com/"><img src="../assets/img/descarga.png" alt="instagram"></a>
+    </div>
+
+    </div>
+</footer>

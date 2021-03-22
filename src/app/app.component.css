@@ -1,0 +1,176 @@
+.color1 {color: #000c16;}
+.color2 {color: #0c302d;}
+.color3 {color: #214e4a;}
+.color4 {color: #376f74;}
+.color5 {color: #55a29f;}
+.color6 {color: #d4e7dc}
+
+
+.social{
+  /*las imágenes usadas tienen width de 48px*/
+  width:48px;
+  position:fixed;
+  top:50px;
+  right:0;
+}
+
+.social img {
+  width: 50px!important;
+  height: 50px!important;
+  border: 1px;
+  background-color: white!important;
+}
+/* Extra centrado vertical*/
+
+.social{
+  /*border:1px solid #000;*/
+  top:50%;
+  height:205px;
+  /*para poner height 192 deberíamos haber indicado en el reset de estilos font-size:0;*/
+  margin-top:-100px;
+}
+
+
+.container-principal{
+  height: 2000px!important;
+
+}
+.footer{
+    width: auto;
+    margin: 0px 0px;
+    padding-top: 1px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.w3-center  img {
+    width: 50px !important;
+    height: 50px!important;
+
+}
+.w3-small img{
+    width: 50px !important;
+    height: 50px!important;
+}
+.topnav {
+    overflow: hidden;
+    background-color:#214e4a;
+  }
+  
+  #menu {
+    background-color: #0c302d !important;
+    color: azure;
+}
+
+  .nav-logo{
+    border-radius: 17px;
+  }
+
+
+  .topnav a {
+    
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #376f74;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+  }
+  
+  .topnav a.active {
+    background-color:#55a29f;
+    color: white;
+  }
+
+
+
+  .slider{
+    height: 400px;
+    width: auto;
+    border: 4px solid;
+
+  }
+
+.w3-center {
+    background-color: #214e4a;
+    text-align: center;
+    
+}
+.w3-small {
+    font-size: 10px;
+}
+
+.w3-center p ,a {
+    color: white;
+}
+.w3-center img{
+    width: 146px;
+    height: 70px;
+    border: 1px;
+    background-color:#214e4a;
+}
+
+.Content-body{
+  width: 100%;
+  background-color: #d4e7dc;
+  height: auto;
+  border: white solid;
+}
+
+.separadores{
+  width: 100%;
+  padding: 70px 0;
+  background-color: white;
+  text-align: center;
+  height: 24px;
+  padding: 36px;
+}
+.separadores h2{
+
+    background-color: white;
+    text-align: center;
+    height: 24px;
+    padding: 0px;
+    margin: 5px;
+    font-size: 2.5em;
+    text-decoration: underline #0c302d;
+    line-height: 0;
+
+}
+
+.row img {
+  width: 100%;
+  height: 100%;
+
+}
+
+
+
+.card {
+  margin: 10px;
+  border: 3px solid white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #55a29f;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  
+}
+
+
+.card-group{
+background-color: #d4e7dc;
+}
+
+.card-group img{
+  border-radius: 2.5em;
+}

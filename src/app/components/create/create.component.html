@@ -1,0 +1,110 @@
+
+
+<div class="container">
+  <div class="row align-items-start">
+    <div class="col-lg-5">
+      
+<div class="container" *ngIf="producto">
+  <h2 id="tituloCrear">{{title}}</h2>
+    <div class="message success" *ngIf="status=='success'">
+      El producto se ha creado correctamente, puedes verlo <a [routerLink]="['/producto',saveProducto._id]">aquí</a>.
+    </div>
+    <div class="message failed" *ngIf="status=='failed'">
+      El producto no se ha podido crear.
+    </div>
+    <form #productoForm="ngForm" (ngSubmit)="onSubmit(productoForm)">
+      <p>
+        <label for="name" class="labels">Nombre</label>
+        <input type="text" name="name" #name="ngModel" [(ngModel)]="producto.name" required/>
+        <span class="form_error" *ngIf="name.touched && !name.valid">
+          El nombre el obligatorio
+        </span>
+      </p>
+      <p>
+        <label for="description" class="labels">Descripción</label>
+        <textarea name="description" #description="ngModel" [(ngModel)]="producto.description" required>
+        </textarea>
+        <span class="form_error" *ngIf="description.touched && !description.valid">
+          La descripción es obligatoria
+        </span>
+      </p>
+      <p>
+        <label for="category" class="labels">Categoría</label>
+        <input type="text" name="category" #category="ngModel" [(ngModel)]="producto.category" required/>
+        <span class="form_error" *ngIf="category.touched && !category.valid">
+          La categoría es obligatoria
+        </span>
+      </p>
+      <p>
+        <label for="price" class="labels">Precio</label>
+        <input type="text" name="precio" #precio="ngModel" [(ngModel)]="producto.precio" required/>
+        <span class="form_error" *ngIf="precio.touched && !precio.valid">
+          El precio es obligatorio
+        </span>
+      </p>
+      <p>
+        <label for="image" class="labels">Imagen del proyecto</label>
+        <span class="image" *ngIf="producto.image" style="float:none;">
+                  <img src="{{url+'get-image/'+producto.image}}" style="width:100px;"/>
+              </span><br/>
+        <input  type="file" class="form-control" placeholder="Subir imagen" (change)="fileChangeEvent($event)"/>
+      </p>
+      
+  
+      <input type="submit" value="Enviar" [disabled]="!productoForm.form.valid"/>
+    </form>
+  </div>
+  
+    </div>
+  
+  
+    <div class="w3-row row-header" *ngIf="productos!=null&&producto.length>0">
+      <div class="w3-col s10 m10 l10">
+          <div class="w3-row w3-hide-small">
+              <div class="w3-col l4 m4">Nombre</div>
+              <div class="w3-col l4 m4">Detalle</div>
+                            <div class="w3-col l4 m4">Categoria</div>
+              <div class="w3-col l4 m4">Precio</div>
+          </div>
+          <div class="w3-row w3-hide-medium w3-hide-large">
+              <div>Productos</div>
+          </div>
+      </div>
+
+      <div class="w3-col m2 l2 w3-hide-small col-acciones">Acciones</div>
+  </div>
+
+  <div *ngFor="let o of obras">
+      <div class="w3-row bg-#{(cont.index) mod 2}">
+          <div class="w3-col s10 m10 l10 col-datos">
+              <div class="w3-row">
+                  <div>
+                      <div class="w3-col s6 w3-hide-medium w3-hide-large">Nombre</div>
+                      <div class="w3-col l4 m4 s6">{{o.nombre}}</div>
+                  </div>
+                  <div>
+                      <div class="w3-col s6 w3-hide-medium w3-hide-large">Fecha INgreso</div>
+                      <div class="w3-col l4 m4 s6">{{o.fecha_ingreso}}</div>
+                  </div>
+                  <div>
+                      <div class="w3-col s6 w3-hide-medium w3-hide-large">Estado</div>
+                      <div class="w3-col l4 m4 s6">{{o.estado}}</div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="w3-col s2 m2 l2 col-acciones">
+              <button onclick="document.getElementById('id01').style.display='block'" type="submit"
+                  class="w3-button w3-teal w3-border w3-round-large" (click)="editar(o)">
+                  Editar
+              </button>
+          </div>
+      </div>
+
+  </div>
+
+
+
+  </div>
+</div>
+
